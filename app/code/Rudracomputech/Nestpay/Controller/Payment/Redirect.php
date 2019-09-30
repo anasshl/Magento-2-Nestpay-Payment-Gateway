@@ -134,8 +134,8 @@ $this->_resultPageFactory = $resultPageFactory;
         $oid = str_replace("|", "\\|", str_replace("\\", "\\\\", $order->getIncrementId()));
         $amountp = str_replace("|", "\\|", str_replace("\\", "\\\\", $order->getGrandTotal()));
         $amount = round($amountp,2);
-        $okurl = str_replace("|", "\\|", str_replace("\\", "\\\\",  $configHelper->getConfig('nestpay/payment/response')));
-        $failurl = str_replace("|", "\\|", str_replace("\\", "\\\\",  $configHelper->getConfig('nestpay/payment/response')));
+        $okurl = str_replace("|", "\\|", str_replace("\\", "\\\\",  $configHelper->getUrl('nestpay/payment/response')));
+        $failurl = str_replace("|", "\\|", str_replace("\\", "\\\\",  $configHelper->getUrl('nestpay/payment/response')));
         $trantype = str_replace("|", "\\|", str_replace("\\", "\\\\",  $configHelper->getConfig('payment/nestpay/trantype')));
         $instalment = '';
 
